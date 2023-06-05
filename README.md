@@ -31,7 +31,7 @@ Wire the display to the GIGA R1 WiFi using the following chart:
 
 ## Software Setup
 
-1. Install MicroPython on your board. To install on the GIGA R1 WiFi, follow [this guide]().
+1. Install MicroPython on your board. To install on the GIGA R1 WiFi, follow [this guide](https://docs.arduino.cc/tutorials/giga-r1-wifi/giga-micropython).
 2. Install a MicroPython-compatible editor (like [Thonny](https://thonny.org/) or [Arduino Lab for MP](https://labs.arduino.cc/en/labs/micropython))
 3. Install the SSD1306 OLED driver on your board, either by installing directly via Thonny's built-in package manager or by copying over the `ssd1306.py` file in this repository to the `lib` folder of your board.
 4. Create an account with [OpenAI](https://openai.com/). Once created, you will need to register a credit card or another payment method. You should then be able to create an API key.
@@ -46,9 +46,4 @@ When you have set it up properly, anytime you launch the script, the following w
 - The content of `open_ai_question` is sent in a POST request to the OpenAI API, which will return a response. This uses the `urequests` & `ujson` modules. 
 - The response is printed on the OLED display, letter by letter for extra dramatic effect.\*
 
-\*I couldn't find a text wrap function in the `ssd1306.py` module so I made a quick and dirty improvisation (the `print_oled()` function). 
-
-That's it! The request was built using [Postman](https://www.postman.com/) and can be tuned to whatever you like.
-
-
-
+>\*I couldn't find a text wrap function in the `ssd1306.py` module so I made a quick and dirty improvisation (the `print_oled()` function).
